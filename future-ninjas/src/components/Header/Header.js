@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Container, ContainerHeader, Logo, HeaderFl, ButtonUi } from './style';
 
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 
 export default class Header extends Component {
   render() {
@@ -11,7 +11,7 @@ export default class Header extends Component {
           <ContainerHeader >
             <Logo>Imagem</Logo>
               <HeaderFl>
-                  <Button variant="outlined" onClick={this.props.onChangeQueroTrabalhar}>Ver Vagas</Button>            
+                  <button onClick={this.props.onChangeQueroTrabalhar}>Ver Vagas</button>            
                   <span>Sou Empresa</span>            
                   <span>Sou Candidato</span>            
               </HeaderFl>
