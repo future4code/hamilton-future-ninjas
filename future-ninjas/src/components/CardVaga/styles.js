@@ -10,7 +10,7 @@ export const ContainerItem = styled.div `
     padding: 10px;
     
     :hover {
-        box-shadow: 1px 1px 8px 8px #EEE9E9;
+        box-shadow: 1px 1px 8px 8px lightgrey;
     }
 `
 export const City = styled.span`
