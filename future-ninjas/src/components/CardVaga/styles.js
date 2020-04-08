@@ -13,7 +13,7 @@ export const ContainerItem = styled.div `
         box-shadow: 1px 1px 8px 8px lightgrey;
     }
 `
-export const City = styled.span`
+export const City = styled.p`
     color: #363636;
 `
 export const Techs = styled.ul`
@@ -22,4 +22,8 @@ export const Techs = styled.ul`
 
 export const Tech = styled.li`
    
+`
+
+export const H1 = styled.h1`
+    color: #7139c1;
 `

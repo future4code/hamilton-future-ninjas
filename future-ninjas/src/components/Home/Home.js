@@ -1,19 +1,16 @@
 import React from 'react';
-import { Container, ContainerHeader, Logo, Header, Section, Main, DivMain, ContainerItens, Item,SectionDetails, ContainerDetails, Span, Footer } from './style'
+import { Container, Section, Main, DivMain, ContainerItens, Item,SectionDetails, ContainerDetails, Span, Footer } from './style';
+
+import Header from '../Header/Header';
 
 class Home extends React.Component {
     
     render() {
         return (
             <Container>
-              <ContainerHeader >
-                <Logo>Imagem</Logo>
-                <Header>
-                    <span>Entrar</span>            
-                    {/* <NavigationIcon>Sou um profissional</NavigationIcon> */}
-                </Header>
-              </ContainerHeader >
-        
+
+            <Header onChangeQueroTrabalhar={this.props.onChangeQueroTrabalhar}/>
+
               <Main>
                   <DivMain>
                     <h1>Contrate freelancers especializados para qualquer trabalho, on-line.</h1>

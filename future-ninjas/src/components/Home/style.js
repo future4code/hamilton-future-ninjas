@@ -2,22 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div``
 
-export const Header = styled.div`
-width: 20vw;
-display: flex;
-justify-content: space-between; 
-`
-export const ContainerHeader = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  max-width: 100vw;
-  height: 10vh;
-  background: #9159c1;
-`
-export const Logo = styled.div`
- 
-`
+
 export const Main = styled.main`
  background: #131313;
  height: 85vh;
