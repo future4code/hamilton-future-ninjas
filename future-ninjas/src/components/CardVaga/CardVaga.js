@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ContainerCardVaga, ContainerItem, City, Techs, Tech } from './styles';
+import { ContainerCardVaga, ContainerItem, City, Techs, Tech, H1 } from './styles';
 import axios from 'axios';
 
 export default class CardVaga extends Component {
@@ -30,9 +30,9 @@ export default class CardVaga extends Component {
                 {this.state.listaDeVagas.map((vaga, index) => {
                     return (
                         <ContainerItem>
-                            <h1>{vaga.title}</h1>
+                            <H1>{vaga.title}</H1>
                             <City>{vaga.cidade}</City>
-                            <br />
+    
                             <strong>R$ {vaga.value}</strong>
                             <p>{vaga.description}</p>
                             <Techs>
