@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components';
-import { ContainerCardVaga } from './styles';
+import { ContainerCardVaga, ContainerItem, City, Techs, Tech } from './styles';
 import axios from 'axios';
 
 export default class CardVaga extends Component {
@@ -30,21 +29,21 @@ export default class CardVaga extends Component {
             <ContainerCardVaga>
                 {this.state.listaDeVagas.map((vaga, index) => {
                     return (
-                        <div>
+                        <ContainerItem>
                             <h1>{vaga.title}</h1>
-                            <span>{vaga.cidade}</span>
+                            <City>{vaga.cidade}</City>
                             <br />
                             <strong>R$ {vaga.value}</strong>
                             <p>{vaga.description}</p>
-                            <ul>
-                                <li>{vaga.tags}</li>
-                            </ul>
+                            <Techs>
+                                <Tech>{vaga.tags}</Tech>
+                            </Techs>
                             
                             {/* Criar componente formulário */}
                             <button>Demonstrar interesse!</button>
                             <br />
                             <span>Há aproximadamente 20 horas atrás.</span>
-                        </div>
+                        </ContainerItem>
                     )
                 })}
             </ContainerCardVaga>
