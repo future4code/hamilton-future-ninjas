@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import {ContainerHeader, Header, Logo, Main} from './styles'
+import {ContainerHeader, Header, Logo, Main, Search} from './styles'
 import CardVaga from '../CardVaga/CardVaga';
 
 class QueroTrabalhar extends React.Component  {
@@ -8,8 +8,11 @@ class QueroTrabalhar extends React.Component  {
         return (
             <Container >
                 <ContainerHeader >
-                    <Logo>Imagem</Logo>
-                    <Header></Header>
+                    <Header>
+                    {/* <Logo>Imagem</Logo> */}
+                    <h1>Vagas para Desenvolvedores</h1>
+                    <Search placeholder="Pesquisar vagas por tecnologia desejada.."></Search>
+                    </Header>
                 </ContainerHeader >
                 
                 <Main>
