@@ -23,7 +23,7 @@ export default class FiltroVaga extends Component {
   }
 
   onClickFiltrar = () => {
-    this.props.filtroValor(this.state.inputValorMaximo, this.state.inputValorMinimo)
+    this.props.filtroValor(this.state.inputValorMinimo, this.state.inputValorMaximo)
   }
 
   render() {

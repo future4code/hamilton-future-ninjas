@@ -4,18 +4,23 @@ import styled from 'styled-components'
 import Home from './components/Home/Home';
 import QueroContratar from './components/QueroContratar/QueroContratar';
 import QueroTrabalhar from './components/QueroTrabalhar/QueroTrabalhar';
-
+import Footer from './components/Footer/Footer'
 
 
 class App extends React.Component {
-    
+ 
     state = {
       tela: "inicial",
       valorMin: 0,
       valorMax: 9999999
     }
 
-
+  onChangeHome = () => {
+    this.setState({
+      tela: "home"
+    })
+  }
+    
   onChangeQueroContratar = () => {
     this.setState({
       tela: "queroContratar"
@@ -33,6 +38,7 @@ class App extends React.Component {
       this.setState({
         valorMin: valorMin,
         valorMax: 99999999
+
       })
     } else if(valorMin === '' && valorMax !== '') {
       this.setState({
@@ -70,16 +76,24 @@ class App extends React.Component {
 
       case "queroTrabalhar":
         tela = (<QueroTrabalhar 
-          
+          onChangeHome={this.onChangeHome}
           filtroValor={this.teste} 
           valorMax={this.state.valorMax}
           valorMin={this.state.valorMin}
+ 
         />);
+        break;
+        case "home": 
+        tela = (<Home/>)
+        break;
+
+        default: 
     }
     
     return (
       <Container >
         {tela}
+        <Footer/>
       </Container >
     );
   }
