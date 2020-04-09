@@ -25,27 +25,32 @@ export default class CardVaga extends Component {
     }
 
     render() {
+        
+        const vagasFiltradas = this.state.listaDeVagas.filter(vaga => {
+            return vaga.value >= this.props.valorMin && vaga.value <= this.props.valorMax
+        })
+        
         return (
-            <ContainerCardVaga>
-                {this.state.listaDeVagas.map((vaga, index) => {
-                    return (
-                        <ContainerItem>
+            <ContainerCardVaga>                            
+                    {vagasFiltradas.map(vaga => {
+                        return (
+                            <ContainerItem>
                             <H1>{vaga.title}</H1>
                             <City>{vaga.cidade}</City>
     
                             <strong>R$ {vaga.value}</strong>
                             <p>{vaga.description}</p>
                             <Techs>
-                                <Tech>{vaga.tags}</Tech>
+                                <Tech>{vaga.tecnologia}</Tech>
                             </Techs>
                             
                             {/* Criar componente formulário */}
-                            <button>Demonstrar interesse!</button>
+                            <button>Ver Detalhes</button>
                             <br />
                             <span>Há aproximadamente 20 horas atrás.</span>
                         </ContainerItem>
-                    )
-                })}
+                        )
+                    })}                
             </ContainerCardVaga>
         )
     }

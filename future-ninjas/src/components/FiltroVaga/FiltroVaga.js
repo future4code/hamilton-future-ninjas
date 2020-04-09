@@ -1,8 +1,31 @@
 import React, { Component} from 'react';
+import axios from 'axios';
 
 import { Container, Input  } from './style';
 
 export default class FiltroVaga extends Component {
+
+  state = {
+    inputValorMaximo: '',
+    inputValorMinimo: ''
+  }
+
+  onChangeInputValorMaximo = (event) => {
+    this.setState({
+      inputValorMaximo: event.target.value
+    })
+  }
+  
+  onChangeInputValorMinimo = (event) => {
+    this.setState({
+      inputValorMinimo: event.target.value
+    })
+  }
+
+  onClickFiltrar = () => {
+    this.props.filtroValor(this.state.inputValorMaximo, this.state.inputValorMinimo)
+  }
+
   render() {
     return(
         <Container>
@@ -20,7 +43,13 @@ export default class FiltroVaga extends Component {
             <p>Apenas presencial (100)</p>
 
             <h3>Filtro por valor</h3>
-            <Input type="text" placeholder="Min"/> <span> - </span> <Input type="text" placeholder="Máx"/>
+            <Input type="text" onChange={this.onChangeInputValorMinimo} value={this.state.inputValorMinimo}  placeholder="Min"/> 
+            
+            <span>-</span>
+            
+            <Input type="text" onChange={this.onChangeInputValorMaximo} value={this.state.inputValorMaximo} placeholder="Máx"/>
+
+            <button onClick={this.onClickFiltrar}>Filtrar</button>
             
         </Container>
     )

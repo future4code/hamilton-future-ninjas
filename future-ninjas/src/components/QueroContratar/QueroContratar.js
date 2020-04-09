@@ -77,11 +77,15 @@ class QueroContratar extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Teste</h1>
-                <div>
+            <ParentDiv>
+                <Header />
+                <Main>
+                <DivMain>
+                    <Titulo>Anuncie aqui uma vaga e encontre um profissional freelancer!</Titulo>
+                <form>
+                    <FormDiv>
                     <label htmlFor= "título">Título: </label>
-                    <input
+                    <Input
                         value= {this.state.valorInputTitulo}
                         onChange = {this.onchangeTitulo}
                         name ="título"
@@ -109,7 +113,7 @@ class QueroContratar extends React.Component {
                     <br/>
 
                     <label htmlFor= "vencimento">Data de vencimento: </label>
-                    <input
+                    <Input
                         value= {this.state.valorInputDataVencimento}
                         onChange = {this.onchageVencimento}
                         name ="vencimeto"
@@ -138,15 +142,16 @@ class QueroContratar extends React.Component {
                     </Descricao>
                     <br/>
                      <label htmlFor= "tecnologia">Tecnologias: </label>
-                    <input 
+                    <Input 
                         value= {this.state.valorInputTecnologia}
                         onChange = {this.onchageTecnologia}
                         name ="tecnologia"
 
                         
-                    /> */}
+                    />
                     <Button onClick={this.criarNovaVaga}>Anunciar vaga</Button>
-                </FormDiv></form>
+                </FormDiv>
+                </form>
                 </DivMain>
                 </Main>
                 
