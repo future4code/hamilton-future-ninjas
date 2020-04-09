@@ -10,7 +10,9 @@ import QueroTrabalhar from './components/QueroTrabalhar/QueroTrabalhar';
 class App extends React.Component {
     
     state = {
-      tela: "inicial"
+      tela: "inicial",
+      valorMin: '',
+      valorMax: ''
     }
 
 
@@ -24,6 +26,30 @@ class App extends React.Component {
     this.setState({
       tela: "queroTrabalhar"
     })
+  }
+
+  teste = (valorMin, valorMax) => {
+    if(valorMin !== '' && valorMax === '') {
+      this.setState({
+        valorMin: valorMin,
+        valorMax: 99999999
+      })
+    } else if(valorMin === 0 && valorMax !== '') {
+      this.setState({
+        valorMin: 0,
+        valorMax: valorMax
+      })
+    } else if(valorMin === '' && valorMax === '') {
+      this.setState({
+        valorMin: 0,
+        valorMax: 99999999
+      })
+    } else {
+      this.setState({
+        valorMin: valorMin,
+        valorMax: valorMax
+      })
+    }
   }
 
   render() {
@@ -43,7 +69,12 @@ class App extends React.Component {
         break;
 
       case "queroTrabalhar":
-        tela = (<QueroTrabalhar />);
+        tela = (<QueroTrabalhar 
+          
+          filtroValor={this.teste} 
+          valorMax={this.state.valorMax}
+          valorMin={this.state.valorMin}
+        />);
     }
     
     return (

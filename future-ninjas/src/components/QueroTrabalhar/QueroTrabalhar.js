@@ -20,8 +20,14 @@ class QueroTrabalhar extends React.Component  {
                 </ContainerHeader >
                 
                 <Main>
-                    <FiltroVaga />
-                    <CardVaga />
+                    <FiltroVaga filtroValor={this.props.filtroValor}                    
+                    />
+                    <CardVaga 
+
+                    valorMax={this.valorMax}
+                    valorMin={this.valorMin}
+                    
+                    />
                 </Main>    
             
             </Container >
