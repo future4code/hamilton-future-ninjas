@@ -25,5 +25,5 @@ export const Tech = styled.li`
 `
 
 export const H1 = styled.h1`
-    color: #7139c1;
+    color: #632eae;
 `

@@ -8,12 +8,12 @@ export const Container = styled.div`
   max-width: 100vw;
   height: 13vh;
   padding: 5px;
-  background: #9159c1;
+  background: transparent;
 
 `
 
 export const HeaderFl = styled.div`
-width: 50vw;
+width: 30vw;
 display: flex;
 justify-content: space-between; 
 align-items: center;

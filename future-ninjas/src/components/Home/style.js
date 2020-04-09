@@ -1,11 +1,15 @@
 import styled from 'styled-components'
+import Background from '../../imgs/PurpleAbstractBackground.jpg'
 
 export const Container = styled.div``
 
 
 export const Main = styled.main`
- background: #131313;
- height: 85vh;
+ background-image: url(${Background});
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-size: 100%;
+ height: 95vh;
  max-width: 100vw;
  margin: 0;
 `

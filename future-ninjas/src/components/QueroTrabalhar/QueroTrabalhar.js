@@ -10,8 +10,8 @@ class QueroTrabalhar extends React.Component  {
     render() {
         return (
             <Container >
-                <Header />
                 <ContainerHeader >
+                <Header />
                     <HeaderFl>
                     {/* <Logo>Imagem</Logo> */}
                     <h1>Vagas para Desenvolvedores</h1>

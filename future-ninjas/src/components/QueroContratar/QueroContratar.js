@@ -78,8 +78,8 @@ class QueroContratar extends React.Component {
     render() {
         return (
             <ParentDiv>
-                <Header />
                 <Main>
+                <Header />
                 <DivMain>
                     <Titulo>Anuncie aqui uma vaga e encontre um profissional freelancer!</Titulo>
                 <form>

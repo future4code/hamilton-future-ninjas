@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const HeaderFl = styled.div`
     width: 30vw;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between; 
     flex-direction: column;
@@ -10,11 +11,12 @@ export const HeaderFl = styled.div`
 `
 export const ContainerHeader = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   max-width: 100vw;
   height: 270px;
-  background: #9159c1;
+  background-image: linear-gradient( #3d2d9f, #632eae, #872dbb);
 `
 export const Logo = styled.div`
 

@@ -10,9 +10,9 @@ class Home extends React.Component {
         return (
             <Container>
 
-            <Header onChangeQueroTrabalhar={this.props.onChangeQueroTrabalhar}/>
 
               <Main>
+                    <Header onChangeQueroTrabalhar={this.props.onChangeQueroTrabalhar}/>
                   <DivMain>
                     <h1>Contrate freelancers especializados para qualquer trabalho, on-line.</h1>
                     <h3>Milhões de pequenos negócios utilizam o Freelancer para transformar suas ideias em realidade.</h3>
@@ -27,15 +27,18 @@ class Home extends React.Component {
                    
                     <ContainerItens>
                         <Item>
-                            Designer Gráfico
+                        <i class="fab fa-sketch"></i>
+                            <p>Designer Gráfico</p>
                         </Item>
         
                         <Item>
-                            Desenvolvimento de Software
+                        <i class="fab fa-php"></i>
+                            <p>Programador PHP Júnior</p>
                         </Item>
         
                         <Item>
-                            PHP
+                        <i class="fab fa-react"></i>
+                       <p> Desenvolvedor React</p>
                         </Item>
         
                         <Item>
