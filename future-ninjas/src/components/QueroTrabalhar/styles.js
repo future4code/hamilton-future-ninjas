@@ -15,7 +15,7 @@ export const ContainerHeader = styled.div`
   justify-content: space-around;
   align-items: center;
   max-width: 100vw;
-  height: 270px;
+  height: 350px;
   background-image: linear-gradient( #3d2d9f, #632eae, #872dbb);
 `
 export const Logo = styled.div`

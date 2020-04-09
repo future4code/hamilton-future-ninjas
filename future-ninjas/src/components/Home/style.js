@@ -8,7 +8,6 @@ export const Main = styled.main`
  background-image: url(${Background});
  background-repeat: no-repeat;
  background-size: cover;
- background-size: 100%;
  height: 95vh;
  max-width: 100vw;
  margin: 0;
@@ -28,7 +27,7 @@ export const Section = styled.div`
 export const SectionDetails = styled.div`
  text-align: center;
  max-width: 100vw;
- height: 40vh;
+ height: fit-content;
  background: #131313;
  color: #eee;
  padding: 30px 12vw 55px 12vw;
@@ -37,13 +36,18 @@ export const SectionDetails = styled.div`
 export const ContainerItens = styled.div`
  margin: 55px auto 150px auto;
  display: grid;
- grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+ grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+ grid-gap: 50px;
 `
 
 export const Item = styled.div`
     background: #7139c1;
     height: 100px;
+    padding: 15px;
     width: 150px;
+    border-radius: 5px;
+    color: white;
+    margin: auto;
 `
 export const Span = styled.div`
    width: 300px;
@@ -54,12 +58,6 @@ export const Span = styled.div`
 export const ContainerDetails = styled.div`
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-`
-
-export const Footer = styled.footer`
-    margin: 55px 0 0 0;
-    height: 20vh;
-    background: #7139c1;
 `
 
 export const Button = styled.button `
@@ -100,4 +98,8 @@ export const Button = styled.button `
   :hover::before {
     transform: translate3d(50%, 50%, 0) scale3d(15, 15, 15);
   }
+`
+export const SpanIcons = styled.span `
+    font-size: 30px;
+    
 `

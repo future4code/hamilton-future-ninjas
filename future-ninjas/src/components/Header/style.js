@@ -51,13 +51,14 @@ export const Button = styled.button `
     font-family: inherit;
     height: fit-content;
     min-height: 50px;
+    font-weight: 600;
     width: fit-content;
     min-width: 100px;
-    color: white;
+    color: #131313;
     padding: 10px;
     outline: none;
     border: none;
-    background-color: #131313;
+    background-color: #F5F3FC;
     overflow: hidden;
     transition: color 0.4s ease-in-out;
   ::before {

@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {Main, Titulo, ParentDiv, DivMain, Input, Descricao, FormDiv,Button} from './style';
 import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 
 
 class QueroContratar extends React.Component {
@@ -77,7 +78,7 @@ class QueroContratar extends React.Component {
 
     render() {
         return (
-            <ParentDiv>
+            <ParentDiv> 
                 <Main>
                 <Header />
                 <DivMain>
@@ -154,7 +155,7 @@ class QueroContratar extends React.Component {
                 </form>
                 </DivMain>
                 </Main>
-                
+               
             </ParentDiv>
 
         )

@@ -9,7 +9,7 @@ export default class Header extends Component {
     return (
         <Container>
           <ContainerHeader >
-            <Logo><Img src={require("../../imgs/logo.png")} /> {/* botar um onClick para renderizar a home quando a logo for clicada */} </Logo> 
+            <Logo><Img onClick={this.props.onChangeHome} src={require("../../imgs/logo.png")} /> {/* botar um onClick para renderizar a home quando a logo for clicada */} </Logo> 
               <HeaderFl>
                   <Button onClick={this.props.onChangeQueroTrabalhar}>Ver Vagas</Button>            
                   <Button onClick={this.props.onChangeQueroTrabalhar}>Sou Empresa</Button>            

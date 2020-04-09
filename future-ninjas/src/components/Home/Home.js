@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Section, Main, DivMain, 
-ContainerItens, Item,SectionDetails, ContainerDetails, Span, Footer, Button } from './style';
-
+ContainerItens, Item,SectionDetails, ContainerDetails, Span, Button, SpanIcons } from './style';
+import Footer from '../Footer/Footer'
 import Header from '../Header/Header';
 
 class Home extends React.Component {
@@ -27,26 +27,28 @@ class Home extends React.Component {
                    
                     <ContainerItens>
                         <Item>
-                        <i class="fab fa-sketch"></i>
+                        <SpanIcons><i class="fab fa-sketch"></i></SpanIcons>
                             <p>Designer Gráfico</p>
                         </Item>
         
                         <Item>
-                        <i class="fab fa-php"></i>
+                        <SpanIcons><i class="fab fa-php"></i></SpanIcons>
                             <p>Programador PHP Júnior</p>
                         </Item>
         
                         <Item>
-                        <i class="fab fa-react"></i>
+                        <SpanIcons><i class="fab fa-react"></i></SpanIcons>
                        <p> Desenvolvedor React</p>
                         </Item>
         
                         <Item>
-                            Modelagem 3D
+                        <SpanIcons><i class="fab fa-unity"></i></SpanIcons>
+                        <p> Modelagem 3D</p>
                         </Item>
         
                         <Item>
-                           Linux
+                        <SpanIcons><i class="fab fa-linux"></i></SpanIcons>
+                        <p> Linux</p>
                         </Item>
                     </ContainerItens>
               </Section>
@@ -76,19 +78,6 @@ class Home extends React.Component {
                 </ContainerDetails>
               </SectionDetails>
         
-                <Section>
-                    <h1>Navegue pelas principais categorias de trabalho</h1>
-                    <ul>
-                        <li>Teste</li>
-                        <li>Teste</li>
-                        <li>Teste</li>
-                        <li>Teste</li>
-                    </ul>
-                </Section>
-        
-                <Footer>
-                    oi
-                </Footer>
         
             </Container>
           );

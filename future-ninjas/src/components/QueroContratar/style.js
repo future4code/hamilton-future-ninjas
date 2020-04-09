@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 
-export const ParentDiv = styled.form `
+export const ParentDiv = styled.div `
     color: white;
     
 `
+// export const Form = styled.form `
+//     height: inherit;
+//     background: #131313;
+// `
 export const Main = styled.main`
  background: #131313;
- height: 85vh;
+ height: 125vh;
  max-width: 100vw;
  /* margin: 0; */
 `
@@ -15,8 +19,9 @@ export const Titulo = styled.h1 `
 export const DivMain = styled.div`
     color: white;
     position: absolute;
-    margin: 10vh 5vw;
+    margin: 5vh 5vw;
     width: 60vw;
+
 `
 export const Input = styled.input `
     width: 70%;
