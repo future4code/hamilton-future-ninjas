@@ -126,7 +126,7 @@ class QueroContratar extends React.Component {
                         value= {this.state.valorInputValor}
                         onChange = {this.onchangeValor}
                         name ="valor"
-                        
+                        type="number"
                         />
                     <br/>
                     <label htmlFor= "descricao">Descrição: </label>

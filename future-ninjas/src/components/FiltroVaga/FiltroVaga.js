@@ -43,11 +43,11 @@ export default class FiltroVaga extends Component {
             <p>Apenas presencial (100)</p>
 
             <h3>Filtro por valor</h3>
-            <Input type="text" onChange={this.onChangeInputValorMinimo} value={this.state.inputValorMinimo}  placeholder="Min"/> 
+            <Input type="number" onChange={this.onChangeInputValorMinimo} value={this.state.inputValorMinimo}  placeholder="Min"/> 
             
             <span>-</span>
             
-            <Input type="text" onChange={this.onChangeInputValorMaximo} value={this.state.inputValorMaximo} placeholder="Máx"/>
+            <Input type="number" onChange={this.onChangeInputValorMaximo} value={this.state.inputValorMaximo} placeholder="Máx"/>
 
             <button onClick={this.onClickFiltrar}>Filtrar</button>
             

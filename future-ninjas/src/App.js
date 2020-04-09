@@ -11,8 +11,8 @@ class App extends React.Component {
     
     state = {
       tela: "inicial",
-      valorMin: '',
-      valorMax: ''
+      valorMin: 0,
+      valorMax: 9999999
     }
 
 
@@ -34,7 +34,7 @@ class App extends React.Component {
         valorMin: valorMin,
         valorMax: 99999999
       })
-    } else if(valorMin === 0 && valorMax !== '') {
+    } else if(valorMin === '' && valorMax !== '') {
       this.setState({
         valorMin: 0,
         valorMax: valorMax

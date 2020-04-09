@@ -24,8 +24,8 @@ class QueroTrabalhar extends React.Component  {
                     />
                     <CardVaga 
 
-                    valorMax={this.valorMax}
-                    valorMin={this.valorMin}
+                    valorMax={this.props.valorMax}
+                    valorMin={this.props.valorMin}
                     
                     />
                 </Main>    
