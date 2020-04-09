@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import {Main, Titulo, ParentDiv, DivMain, Input, Descricao, FormDiv,Button} from './style';
+import Header from '../Header/Header'
+
 
 class QueroContratar extends React.Component {
     constructor(props) {
@@ -41,6 +44,7 @@ class QueroContratar extends React.Component {
         this.setState({ valorInputDataVencimento: e.target.value })
     }
     
+
     onchageTecnologia = e => {
         this.setState({ valorInputTecnologia: e.target.value })
     }
@@ -49,7 +53,7 @@ class QueroContratar extends React.Component {
         e.preventDefault();
 
     const body = {
-        
+
             "title": this.state.valorInputTitulo,
             "description": this.state.valorInputDescricao,
             "value": this.state.valorInputValor,
@@ -86,11 +90,13 @@ class QueroContratar extends React.Component {
                     <br/>
 
                     <label htmlFor= "cidade">Cidade: </label>
-                    <input
+
+                    <Input
                         value= {this.state.valorInputCidade}
                         onChange = {this.onchangeCidade}
                         name ="cidade"
                     />
+
                     <br/> 
 
                     <label>Método de pagamento: </label>
@@ -98,6 +104,7 @@ class QueroContratar extends React.Component {
                         <option>Cartão de crédito</option>
                         <option>BitCoin</option>
                         <option>Dinheiro</option>
+
                     </select>
                     <br/>
 
@@ -110,7 +117,8 @@ class QueroContratar extends React.Component {
                     />
                     <br/>
                     <label htmlFor= "valor">Valor: </label>
-                    <input
+
+                    <Input
                         value= {this.state.valorInputValor}
                         onChange = {this.onchangeValor}
                         name ="valor"
@@ -118,26 +126,32 @@ class QueroContratar extends React.Component {
                         />
                     <br/>
                     <label htmlFor= "descricao">Descrição: </label>
-                    <textarea
+
+                    <Descricao
+
+  
                         value ={this.state.valorInputDescricao}
                         onChange={this.onchangeDescricao}
                         name ="descricao"
                         
                     >
-                    </textarea>
+                    </Descricao>
                     <br/>
                      <label htmlFor= "tecnologia">Tecnologias: </label>
                     <input 
                         value= {this.state.valorInputTecnologia}
                         onChange = {this.onchageTecnologia}
                         name ="tecnologia"
-                    />  
-                   
-             
 
-                    <button onClick={this.criarNovaVaga}>Anunciar vaga</button>
-                </div>
-            </div>
+                        
+                    /> */}
+                    <Button onClick={this.criarNovaVaga}>Anunciar vaga</Button>
+                </FormDiv></form>
+                </DivMain>
+                </Main>
+                
+            </ParentDiv>
+
         )
     }
 }

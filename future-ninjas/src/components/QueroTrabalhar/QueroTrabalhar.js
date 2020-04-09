@@ -15,7 +15,7 @@ class QueroTrabalhar extends React.Component  {
                     <HeaderFl>
                     {/* <Logo>Imagem</Logo> */}
                     <h1>Vagas para Desenvolvedores</h1>
-                    <Search placeholder="Pesquisar vagas por tecnologia desejada.."></Search>
+                <Search placeholder="Pesquisar vagas por tecnologia desejada.."></Search>
                     </HeaderFl>
                 </ContainerHeader >
                 
