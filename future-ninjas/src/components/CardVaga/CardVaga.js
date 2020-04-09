@@ -12,13 +12,13 @@ export default class CardVaga extends Component {
         axios.get('https://us-central1-future-apis.cloudfunctions.net/futureNinjas/jobs', {
             headers: {
                 'Content-Type': 'application/json',
-                'api-token': 'futureninjas'
+                'api-token': 'projetoninja'
             }
         }).then((response) => {
             this.setState({
-                listaDeVagas: response.data.jobs
+                listaDeVagas: response.data.jobs  
             })
-            console.log(this.state.listaDeVagas)
+            console.log(response)
         }).catch((error) => {
             window.alert("Erroooouuuwwww");
         })
