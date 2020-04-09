@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import {Main, Titulo, ParentDiv, DivMain, Input, Descricao, FormDiv,Button} from './style';
+import Header from '../Header/Header'
+
 
 class QueroContratar extends React.Component {
     constructor(props) {
@@ -45,7 +48,8 @@ class QueroContratar extends React.Component {
 
     }
     
-    onclickVaga = () => {
+    onclickVaga = (e) => {
+        e.preventDefault()
         const body = {
 
             title :this.state.inputTitulo,
@@ -76,11 +80,14 @@ class QueroContratar extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Teste</h1>
-                <form>
+            <ParentDiv>
+                <Header/>
+                <Main>
+                <DivMain>
+                    <Titulo>Anuncie aqui uma vaga e encontre um profissional freelancer!</Titulo>
+                <form><FormDiv>
                     <label htmlFor= "título">Título: </label>
-                    <input
+                    <Input
                         value= {this.state.inputTitulo}
                         onChange = {this.onchangeTitulo}
                         name ="título"
@@ -88,13 +95,13 @@ class QueroContratar extends React.Component {
                     />
                     <br/>
                     <label htmlFor= "cidade">Cidade: </label>
-                    <input
+                    <Input
                         value= {this.state.inputCidade}
                         onChange = {this.onchangeCidade}
                         name ="cidade"
 
                     />
-                    <br/>
+        
 
                     {/* <label>Método de pagamento: </label>
                     <select value={this.state.inputMetodoDePagamento} onChange={this.onchageMetodoDePagamento}>
@@ -102,8 +109,6 @@ class QueroContratar extends React.Component {
                         <option>BitCoin</option>
                         <option>Dinheiro</option>
                     </select> */}
-                    <br/>
-
                     {/* <label htmlFor= "vencimento">Data de vencimento: </label>
                     <input
                         value= {this.state.inputDueDate}
@@ -113,7 +118,7 @@ class QueroContratar extends React.Component {
                     /> */}
                     <br/>
                     <label htmlFor= "valor">Valor: </label>
-                    <input
+                    <Input
                         value= {this.state.inputValor}
                         onChange = {this.onchangeValor}
                         name ="valor"
@@ -121,14 +126,14 @@ class QueroContratar extends React.Component {
                     />
                     <br/>
                     <label htmlFor= "descricao">Descrição: </label>
-                    <textarea
+                    <Descricao
 
                         value ={this.state.inputDescricao}
                         onChange={this.onchangeDescricao}
                         name ="descricao"
 
                     >
-                    </textarea>
+                    </Descricao>
                     <br/>
                     {/* <label htmlFor= "tecnologias">Tecnologias: </label>
                     <input 
@@ -137,9 +142,12 @@ class QueroContratar extends React.Component {
                         name ="tecnologia"
                         
                     /> */}
-                    <button onClick={this.onclickVaga}>Anunciar vaga</button>
-                </form>
-            </div>
+                    <Button onClick={this.onclickVaga}>Anunciar vaga</Button>
+                </FormDiv></form>
+                </DivMain>
+                </Main>
+                
+            </ParentDiv>
         )
     }
 }

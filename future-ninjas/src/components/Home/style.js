@@ -9,11 +9,12 @@ export const Main = styled.main`
  max-width: 100vw;
  margin: 0;
 `
+
 export const DivMain = styled.div`
     color: white;
     position: absolute;
-    margin: 25vh 5vw;
-    width: 38vw;
+    margin: 20vh 5vw;
+    width: 60vw;
 `
 
 export const Section = styled.div`
@@ -42,6 +43,9 @@ export const Item = styled.div`
 `
 export const Span = styled.div`
    width: 300px;
+   @media screen and (max-width: 320px)  {
+    width: 280px;
+}
 `
 export const ContainerDetails = styled.div`
  display: grid;
@@ -52,4 +56,44 @@ export const Footer = styled.footer`
     margin: 55px 0 0 0;
     height: 20vh;
     background: #7139c1;
+`
+
+export const Button = styled.button `
+    margin: 10px 0px 10px 0px;
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background-color: #9159c1;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+    border-radius: 5px;
+    margin-left: 20px;
+  ::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: 100%;
+    right: 100%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #7139c1;
+    transform-origin: center;
+    transform: translate3d(50%, 50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+  }
+  
+  :hover {
+    cursor: pointer;
+    color: #161616;
+  }
+  
+  :hover::before {
+    transform: translate3d(50%, 50%, 0) scale3d(15, 15, 15);
+  }
 `

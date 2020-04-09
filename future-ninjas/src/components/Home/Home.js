@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Section, Main, DivMain, ContainerItens, Item,SectionDetails, ContainerDetails, Span, Footer } from './style';
+import { Container, Section, Main, DivMain, 
+ContainerItens, Item,SectionDetails, ContainerDetails, Span, Footer, Button } from './style';
 
 import Header from '../Header/Header';
 
@@ -15,8 +16,8 @@ class Home extends React.Component {
                   <DivMain>
                     <h1>Contrate freelancers especializados para qualquer trabalho, on-line.</h1>
                     <h3>Milhões de pequenos negócios utilizam o Freelancer para transformar suas ideias em realidade.</h3>
-                    <button onClick={this.props.onChangeQueroContratar}>Quero Contratar</button>
-                    <button onClick={this.props.onChangeQueroTrabalhar}>Eu quero trabalhar</button>
+                    <Button onClick={this.props.onChangeQueroContratar}>Quero Contratar</Button>
+                    <Button onClick={this.props.onChangeQueroTrabalhar}>Eu quero trabalhar</Button>
                   </DivMain>
               </Main>
         
